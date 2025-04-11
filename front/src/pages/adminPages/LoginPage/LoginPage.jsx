@@ -90,7 +90,8 @@ function LoginPage(props) {
     const passwordInputRef = React.useRef(null);
 
     const handleOAuth2LoginOnClick = (provider) => {
-        window.location.href = `http://localhost:8080/oauth2/authorization/${provider}`;
+        // window.location.href = `http://localhost:8080/oauth2/authorization/${provider}`;
+        window.location.href = `http://https://kioskstudents.store/oauth2/authorization/${provider}`;
     }
 
     return (
