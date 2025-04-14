@@ -44,7 +44,7 @@ jobs:
                       client-secret: ${{ secrets.GOOGLE_CLIENT_PASSWORD }}
                     naver:
                       client-id: ${{ secrets.NAVER_CLIENT_ID }}
-                      client-secret: l${{ secrets.NAVER_CLIENT_PASSWORD }}
+                      client-secret: ${{ secrets.NAVER_CLIENT_PASSWORD }}
           
           
             jwt:
