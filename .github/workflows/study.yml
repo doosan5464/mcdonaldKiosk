@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 😎 Checkout
-      - uses: actions/checkout@v4
+        uses: actions/checkout@v4
       
       - name: 😢 create-vite-env
         run: |
@@ -23,7 +23,7 @@ jobs:
       - name: 😘 create-application-secret
         run: |
           chmod 777 -R front
-          cat << EOL > back/src/main/resources/.applicaton-secret.yml
+          cat << EOL > back/src/main/resources/.application-secret.yml
           spring:
             config:
               activate:
@@ -67,13 +67,13 @@ jobs:
         run: |
           cd front
           docker build -t ${{ secrets.DOCKER_USERNAME }}/mcdonald-kiosk-react-app:latest .
-          docker push -t ${{ secrets.DOCKER_USERNAME }}/mcdonald-kiosk-react-app:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/mcdonald-kiosk-react-app:latest
       
       - name: 🤣 Build-And-Push-Spiring-App
         run: |
           cd back
           docker build -t ${{ secrets.DOCKER_USERNAME }}/mcdonald-kiosk-spring-app: .
-          docker push -t ${{ secrets.DOCKER_USERNAME }}/mcdonald-kiosk-spring-app:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/mcdonald-kiosk-spring-app:latest
         
   deploy:
     needs: build-push
