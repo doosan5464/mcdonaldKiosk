@@ -66,13 +66,13 @@ jobs:
       - name: 😁 Build-And-Push-React-App
         run: |
           cd front
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/mcdonald-kiosk-react-app:latest .
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/mcdonald-kiosk-react-app .
           docker push ${{ secrets.DOCKER_USERNAME }}/mcdonald-kiosk-react-app:latest
       
       - name: 🤣 Build-And-Push-Spiring-App
         run: |
           cd back
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/mcdonald-kiosk-spring-app: .
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/mcdonald-kiosk-spring-app .
           docker push ${{ secrets.DOCKER_USERNAME }}/mcdonald-kiosk-spring-app:latest
         
   deploy:
