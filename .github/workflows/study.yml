@@ -88,7 +88,7 @@ jobs:
           script: |
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/mcdonald-kiosk-react-app:latest
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/mcdonald-kiosk-spring-app:latest
-            cd /home/ubuntu
+            cd /home/ubuntu/project
             sudo docker-compose -f docker-compose.yml down
             sudo docker-compose -f docker-compose.yml up -d
           
