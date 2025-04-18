@@ -91,7 +91,7 @@ function LoginPage(props) {
 
     const handleOAuth2LoginOnClick = (provider) => {
         // window.location.href = `http://localhost:8080/oauth2/authorization/${provider}`;
-        window.location.href = `http://https://kioskstudents.store/oauth2/authorization/${provider}`;
+        window.location.href = `https://kioskstudents.store/oauth2/authorization/${provider}`;
     }
 
     return (
