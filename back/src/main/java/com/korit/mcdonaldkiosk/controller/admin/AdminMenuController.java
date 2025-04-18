@@ -96,6 +96,7 @@ public class AdminMenuController {
         return ResponseEntity.ok().body(adminMenuService.addMenu(menu, menuPrices));
     }
 
+    
     // 메뉴 삭제
     @DeleteMapping("/menus/{menuId}")
     public ResponseEntity<?> deleteMenu(@PathVariable int menuId) {

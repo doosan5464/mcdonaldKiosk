@@ -94,6 +94,7 @@ function LoginPage(props) {
         window.location.href = `https://kioskstudents.store/oauth2/authorization/${provider}`;
     }
 
+    
     return (
         <div css={s.container}>
             <div css={s.layout}>
